@@ -1,0 +1,23 @@
+sylius_paypal_webhook:
+    resource: "@SyliusPayPalPlugin/Resources/config/webhook_routing.yaml"
+
+app_admin_newsletter:
+    resource: |
+        alias: app.newsletter
+        section: admin
+        templates: "@SyliusAdmin\\Crud"
+        redirect: index
+        grid: app_admin_newsletter
+        vars:
+            all:
+                subheader: app.ui.newsletter
+            index:
+                icon: 'file image outline'
+    type: sylius.resource
+    prefix: /admin
+
+app_newsletter_unsubscribe_action:
+    path: /newsletter/{newsletterId}/customer/{customerId}/unsubscribe
+    methods: [GET]
+    defaults:
+        _controller: sylius.controller.newsletter::unsubscribe

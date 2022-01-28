@@ -1,0 +1,17 @@
+app:
+    ui:
+        newsletters: Newsletters
+        subscribers: Subscribers
+        newsletter: Manage your newsletters
+        new_newsletter: New newsletter
+        edit_newsletter: Edit newsletter
+        
+sylius:
+    email:
+        user_registration:
+            newsletters_subscription: Newsletters subscription
+    menu:
+        admin:
+            main:
+                newsletters:
+                    header: Newsletters
